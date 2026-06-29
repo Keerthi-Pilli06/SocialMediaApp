@@ -1,0 +1,90 @@
+/* Basic Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+
+/* Dynamic Bright Neon/Gradient Background */
+body { 
+    background: linear-gradient(135deg, #ff007f, #7928ca, #00dfd8);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: #333; 
+    display: flex; 
+    justify-content: center; 
+    min-height: 100vh; 
+    padding: 20px; 
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hidden { display: none !important; }
+
+/* Buttons Style with Vibrant Purple/Pink theme */
+.btn { 
+    background: linear-gradient(45deg, #ff007f, #7928ca); 
+    color: white; 
+    border: none; 
+    padding: 12px; 
+    border-radius: 25px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    width: 100%; 
+    margin-top: 15px; 
+    box-shadow: 0 4px 10px rgba(239, 7, 145, 0.4);
+    transition: transform 0.2s;
+}
+.btn:hover { transform: scale(1.02); }
+
+/* Header Titles */
+.app-title-main { color: #7928ca; font-size: 24px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+.app-title-feed { color: #ff007f; font-size: 20px; margin-bottom: 5px; }
+
+/* Auth Styling */
+.auth-box { background: rgba(255, 255, 255, 0.95); border: none; padding: 35px; border-radius: 16px; width: 360px; margin-top: 60px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); text-align: center; height: fit-content; }
+.auth-box h2 { margin-bottom: 15px; color: #333; }
+.auth-box input { width: 100%; padding: 12px; margin: 10px 0; border: 2px solid #efefef; border-radius: 8px; background: #fafafa; transition: border-color 0.3s; }
+.auth-box input:focus { border-color: #7928ca; outline: none; }
+
+/* Toggle texts changed to direct simple action */
+.toggle-text { margin-top: 20px; font-size: 15px; }
+.toggle-text span { color: #ff007f; cursor: pointer; font-weight: bold; text-decoration: underline; font-size: 16px; }
+
+/* Main App Layout */
+#main-app { width: 100%; max-width: 600px; margin: 0 auto; }
+.main-header { display: flex; justify-content: space-between; align-items: center; background: rgba(255, 255, 255, 0.95); padding: 15px 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 20px; }
+.logout-btn { background: #ff0055; color: white; border: none; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 8px rgba(255,0,85,0.3); }
+
+/* Create Post Card */
+.create-post-card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 20px; }
+.create-post-card h4 { margin-bottom: 12px; color: #444; }
+.create-post-card textarea { width: 100%; padding: 12px; border: 2px solid #eee; border-radius: 8px; resize: none; }
+.file-upload-wrapper { margin: 12px 0; }
+.file-label { display: inline-block; background: #00dfd8; color: #111; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 14px; font-weight: bold; }
+#post-image { display: none; }
+#image-preview-container img { width: 100%; max-height: 250px; object-fit: cover; border-radius: 8px; margin-top: 10px; }
+
+/* Feed Posts */
+.post { background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.post-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.user-info { display: flex; align-items: center; gap: 12px; }
+
+/* Bright Neon Follow button logic style */
+.follow-btn { background: linear-gradient(45deg, #00dfd8, #0077c6); color: white; border: none; padding: 6px 14px; border-radius: 20px; cursor: pointer; font-size: 13px; font-weight: bold; }
+.follow-btn.following { background: #e0e0e0 !important; color: #555 !important; }
+
+.delete-btn { background: none; border: none; color: #ff0055; cursor: pointer; font-size: 20px; }
+.post-image-display { width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; margin: 12px 0; }
+.like-btn { background: none; border: none; font-size: 18px; cursor: pointer; margin: 8px 0; color: #555; }
+.like-btn.liked { color: #ff0055; font-weight: bold; }
+
+/* Comments */
+.comments-section { border-top: 2px solid #f5f5f5; padding-top: 12px; margin-top: 12px; }
+.comments-list { list-style: none; margin-bottom: 12px; max-height: 150px; overflow-y: auto; }
+.comments-list li { background: #f9f9f9; padding: 8px 12px; border-radius: 6px; margin-bottom: 6px; font-size: 13px; border-left: 3px solid #7928ca; }
+.comment-form { display: flex; gap: 8px; }
+.comment-input { flex: 1; padding: 8px 12px; border: 2px solid #eee; border-radius: 20px; }
+.comment-submit { background: none; border: none; color: #7928ca; font-weight: bold; cursor: pointer; font-size: 14px; }
+.error-msg { color: #ff0055; font-size: 14px; margin-bottom: 10px; font-weight: bold; }
+.success-msg { color: #00b300; font-size: 14px; margin-bottom: 10px; font-weight: bold; }
